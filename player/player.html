@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Monarch Procedure Guide</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link href="../data/css/player.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="../player/multi-player.js"></script>
+	</head>
+	<body onload="setTooltipSelected()">
+		<div id="container">
+			<div id="videocontainer" >
+				<div id="vidContainer1" >
+					<video id="vid1"  oncanplay="initPlay();" autoplay="true"
+					muted="muted">			
+					</video>
+				</div>
+				<div id="vidContainer2">
+					<video id="vid2" oncanplay="initPlay();" autoplay="true"
+					muted="muted"></video>
+				</div>
+				<div id="vidContainer3">
+					<video id="vid3" oncanplay="initPlay();" autoplay="true"
+					muted="muted"></video>
+				</div>
+				 <div id="vidContainer4">
+					<video id="vid4" oncanplay="initPlay();" autoplay="true"
+					muted="muted"></video>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="info">
+				<div id="currentchapter">
+					<div id="ch_text"></div>
+				</div>
+			</div>
+			<div class="viewNav" id="viewNav">
+				<ul id="viewNavUl">
+					<li id="tooltipHome" class="tooltip" title="Home"><a href="../CLICK_HERE_TO_START_(US).html" rel="home">Home</a></li>
+					<li id="tooltip1" class="tooltip" title="Plan Case"><a href="player.html#id=1&title=Plan_Case">01</a></li>
+					<li id="tooltip2" class="tooltip" title="Room Setup"><a href="player.html#id=2&title=Room_Setup">02</a></li>
+					<li id="tooltip3" class="tooltip" title="Monarch System Prep"><a href="player.html#id=3&title=Monarch_System_Prep">03</a></li>
+					<li id="tooltip4" class="tooltip" title="Patient Prep"><a href="player.html#id=4&title=Patient_Prep">04</a></li>
+					<li id="tooltip5" class="tooltip" title="Monarch System Prep Completion"><a href="player.html#id=5&title=Monarch_System_Prep_Completion">05</a></li>
+					<li id="tooltip6" class="tooltip" title="Navigation Initialization"><a href="player.html#id=6&title=Navigation_Initialization">06</a></li>
+					<li id="tooltip7" class="tooltip" title="Drive to Target"><a href="player.html#id=7&title=Drive_to_Target">07</a></li>
+					<li id="tooltip8" class="tooltip" title="Confirm Target Location"><a href="player.html#id=8&title=Confirm_Target_Location">08</a></li>
+					<li id="tooltip9" class="tooltip" title="Biopsy"><a href="player.html#id=9&title=Biopsy">09</a></li>
+					<li id="tooltip10" class="tooltip" title="Complete Procedure and Documentation"><a href="player.html#id=10&title=Complete_Procedure_and_Documentation">10</a></li>
+					<li id="tooltip11" class="tooltip" title="Case Tear Down and Cleanup"><a href="player.html#id=11&title=Case_Tear_Down_and_Cleanup">11</a></li>
+					<li id="tooltip12" class="tooltip" title="Scope Cleaning"><a href="player.html#id=12&title=Scope_Cleaning">12</a></li>
+					<li id="tooltip13" class="tooltip" title="Emergent Conversion"><a href="player.html#id=13&title=Emergent_Conversion">13</a></li>
+				</ul>
+			</div>
+			<div id="navbox">
+				<a id="allchapterpdf" target="_blank" data="1" style="text-decoration: none; font-size: 16px;">All Chapter Notes</a>	
+			</div>
+			<div id="sound">
+				<a href="#"><img src="../data/images/sound.png"/></a>
+			</div>
+			<div id="serial"></div>
+			<div id="line"></div>
+			<div id="line2"></div>
+			<div id="bottom">
+				<div id="timesliderBackground">
+					<div id="timeslider"></div>
+				</div> 
+				<div id="playpause">
+					<a href="#"><img src="../data/images/playpause.png"/></a>
+				</div>
+				<div id="backward">
+					<a href="#"><img src="../data/images/backward.png"/></a>
+				</div>
+				<div id="forward">
+					<a href="#"><img src="../data/images/forward.png"/></a>
+				</div>
+			<div id="indicator"></div>
+			</div>	
+		</div>
+		<div id="intro">
+			<div id="start">
+				<ul>
+					<li><a href="#">PLAY >></a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../data/js/mootools/mootools-core-1.4.0-full-compat.js"></script>
+	<script type="text/javascript" src="../data/js/mootools/mootools-more-1-1.4.0.1.js"></script>
+	<script type="text/javascript" src="../data/js/be/bagaar/data/chapters.js"></script>
+	<script type="text/javascript" src="../data/js/be/bagaar/data/cuepoint.js"></script>
+	<script type="text/javascript" src="../data/js/be/bagaar/data/descriptions.js"></script>
+	<script type="text/javascript" src="../data/js/be/bagaar/data/pancartes.js"></script>
+	<script type="text/javascript" src="../data/js/be/bagaar/view/cwvideo.js"></script>
+	<script type="text/javascript" src="../data/js/be/bagaar/utils/browsercheck.js"></script>
+	<script type="text/javascript" src="../data/js/libs/modernizr.custom.js"></script>
+	<script type="text/javascript" src="../data/js/player.js"></script>
+</html>
