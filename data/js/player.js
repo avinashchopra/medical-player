@@ -46,7 +46,6 @@ var introMask = new Mask('intro');
 introMask.hide();
 
 //footer
-var footerRollover = true;
 let marginBetween = 3;
 let heightBetween = 120;
 let smallPlayerHeight = 170;
@@ -673,32 +672,20 @@ function resizeHandler(e){
 		//width en height om te resizen
 		var rWidth;
 		var rHeight;
-		if(footerRollover) {
-			rWidth = maxWidth;
-			rHeight = maxHeight - $('footer').getSize().y - 20;	
-		}else{
-			rWidth = maxWidth;
-			rHeight = maxHeight - $('footer').getSize().y + heightBetween;
-		}
+		rWidth = maxWidth;
+		rHeight = maxHeight - $('footer').getSize().y - 20;
 		$('footer').setStyle('width', rWidth);
 		$('indicator').setPosition({
-			x:Math.round($('footer').getSize().x - 58)
+			x:Math.round($('player-control-icons').getSize().x + $('timesliderBackground').getSize().x)
 		});
 		$('videocontainer').setStyles({
 			'width':rWidth,
 			'height':rHeight
 		});
-		if(footerRollover) {
-			$('footer').setPosition({
-				x:Math.round(maxWidth/2 - $('footer').getSize().x/2),
-				y:maxHeight - $('footer').getSize().y - 5
-			});
-		}else{
-			$('footer').setPosition({
-				x:Math.round(maxWidth/2 - $('footer').getSize().x/2),
-				y:maxHeight - $('footer').getSize().y + 150
-			});
-		}
+		$('footer').setPosition({
+			x:Math.round(maxWidth/2 - $('footer').getSize().x/2),
+			y:maxHeight - $('footer').getSize().y - 5
+		});
 
 		if(activeClicked && getNumberOfView() > 1) {
 			activeClicked.vid.fitIntoRect(rWidth-diff, rHeight);

@@ -56,8 +56,7 @@ video { position: absolute; }
 }
 
 #info {
-	/*background-color: rgba(104, 180, 233, 0.45);*/
-	/*position:absolute;*/
+	padding: 7px;
 	position:relative;
 }
 
@@ -83,11 +82,6 @@ video { position: absolute; }
 
 #ch_text, #par_text {
 	font-size:1rem;
-	/*padding-left:50px;
-	padding-top:20px;*/
-	/* padding-left:30px;
-	padding-top:10px;
-	position:fixed; */
 }
 #navbox {
 	background-color: #53565A;
@@ -316,14 +310,9 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
 }
 
 #bottom {
-	height: 70px;
 	width:100%;
 	position: relative;
-	
-	/*height:0;
-	overflow:hidden;
-	position:relative;
-	width:100%;*/
+	margin-bottom: 5px;
 }
 
 #bottom a {
@@ -333,15 +322,14 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
 }
 
 #timesliderBackground {
-	/*width:80%;*/
+	width:80%;
 	height:12px;
 	background-color: white;
-	margin-left:5%;
-	margin-right: 5%;
 	margin-top:5px;
 	border-radius: 0.6em;
 	-moz-border-radius: 0.6em;
 	-webkit-border-radius: 0.6em;
+	margin-left: -10px;
 }
 #timeslider{
 	cursor: pointer;
@@ -375,10 +363,28 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
 	margin-top: 10px;
 }
 
+#slider-with-icon{
+	display: flex;
+	justify-content: center;
+}
+.slider-player-icon {
+	display: flex;
+	justify-content: center;
+	width: 25%;
+	margin-top: -5px;
+}
+
+.slider-info-icons {
+	display: flex;
+	justify-content: center;
+	margin-left: 10px;
+	margin-top: -7px;
+	width: 25%;
+}
 
 #indicator{
 	position:absolute;
-	margin-top: -16px;
+	margin-top: -15px;
 	color: white;
 	font-size: 0.85rem;
 	font-weight: 400;
@@ -481,7 +487,6 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
     overflow: hidden;
 	flex: 1;
 	text-align: center;
-	padding: 5px 0px;
 }
 #notes {
 	width: 30px;
@@ -491,6 +496,12 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
 	padding:3px;
 	display:inline-block;
 	cursor: pointer;
+}
+.slider-info-icons-styles {
+	width: 30px;
+	display: inline-block;
+	cursor: pointer;
+	padding: 3px 5px;
 }
 #tiles-view{
 	width: 25px;
