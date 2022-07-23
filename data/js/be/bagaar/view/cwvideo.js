@@ -344,10 +344,10 @@ CwVideo.Timeline = new Class({
 			if (this.duration == 0) {
 				this.fireEvent('error', 'Duration is zero');
 			}else{
-				var count = Math.round(this.duration/15);
+				var count = Math.round(this.duration/10);
 				for(var i = 0; i<= count; i++)
 				{
-					var point = new Cuepoint({time:i*15});
+					var point = new Cuepoint({time:i*10});
 					this.cuepoints.push(point);
 				}
 			}

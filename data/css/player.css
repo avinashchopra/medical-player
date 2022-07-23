@@ -5,7 +5,6 @@ html, body{
 	min-height:786px;
 	width:100%;
 	height:100%;
-	font-weight: bold;
 	font-family:Helvetica, Arial, sans-serif;
 	font-size:18px;
 	overflow:hidden;
@@ -41,6 +40,8 @@ video { position: absolute; }
 	min-height: 100%;
 	position: relative;
 	visibility:visible;
+	display: flex;
+	justify-content: center;
 }
 
 #vidContainer1, #vidContainer2, #vidContainer3, #vidContainer4 {
@@ -68,27 +69,25 @@ video { position: absolute; }
 }
 
 #currentchapter {
-	position:absolute;
 	/*opacity:0;*/
-	
+	display: flex;
 }
 
 #ch_pre, #par_pre {
 	font-size:18px;
-	color:#0E0E0E;	
+	color:white;	
 	float:left;
 	position:fixed;
 	/*display:inline-block;*/
 }
 
 #ch_text, #par_text {
-	font-size:30px;
-	color:#0E0E0E;	
+	font-size:1rem;
 	/*padding-left:50px;
 	padding-top:20px;*/
-	padding-left:30px;
+	/* padding-left:30px;
 	padding-top:10px;
-	position:fixed;
+	position:fixed; */
 }
 #navbox {
 	background-color: #53565A;
@@ -96,10 +95,7 @@ video { position: absolute; }
     border-radius: 6px;
     color: white;
 }
-#navbox a{
-	font-size: 15px;
-    color: white;
-}
+
 #navbox li{
 	float: left;
     position: relative;
@@ -184,9 +180,16 @@ video { position: absolute; }
 /*
 	view navigation
 */
-#viewNav, #navbox, #start {
+#navbox, #start {
 	display:inline-block;
 	position:relative;
+	padding-left: 0px;
+}
+#viewNav {
+	padding-left: 0px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 #start {
@@ -210,11 +213,16 @@ video { position: absolute; }
 }
 
 #viewNav li, #start li {
-	padding-left:2px;
+	/* padding-left:2px; */
     float: left;
     position: relative;
     list-style: none;
 	display:block;
+}
+
+#viewNavUl {
+	padding-left: 0px;
+	margin: 0px;
 }
 /* main level link */
 #viewNav a, #start a {
@@ -223,7 +231,8 @@ video { position: absolute; }
     /*background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#a1a1a1)); /* for webkit browsers */
     /*background: -moz-linear-gradient(top,  #ebebeb,  #a1a1a1); /* for firefox 3.6+ */
 
-    color: #0E0E0E;
+	font-size: 0.85rem;
+    color: white;
     /*border-top: solid 1px #e9e9e9;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
@@ -238,20 +247,19 @@ video { position: absolute; }
     -moz-border-radius: 0.5em;*/
 }
 /* main level link hover */
-#viewNav ul .current a, #viewNav ul li:hover > a, #start ul li:hover > a {
-    background: #E0A526; /* for non-css3 browsers */
+
+
+ #viewNav ul li:hover > a, #start ul li:hover > a {
+    color: #E0A526; /* for non-css3 browsers */
     /*filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#57c8f8', endColorstr='#0799d7'); /* for IE */
     /*background: -webkit-gradient(linear, left top, left bottom, from(#57c8f8), to(#0799d7)); /* for webkit browsers */
     /*background: -moz-linear-gradient(top,  #57c8f8,  #0799d7); /* for firefox 3.6+ */
-
-    color: #FFF;
     /*border-top: solid 1px #e9e9e9;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     text-shadow: 0 1px 0 rgba(0, 0, 0, .8);*/
 }
-
 /* #viewNav {
 	display: flex;
 	justify-content: space-around;
@@ -283,20 +291,22 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
 #footer {
 	/*bottom:0;*/
 	visibility:hidden;
-	height:220px;
+	/* height:220px; */
 	position:absolute;
 	
-	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f8fcfd)); /* for webkit browsers */
-    background: -moz-linear-gradient(top,  #ffffff,  #f8fcfd); /* for firefox 3.6+ */
-	
+	/*background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f8fcfd));  for webkit browsers */
+    /* background: -moz-linear-gradient(top,  #ffffff,  #f8fcfd);  for firefox 3.6+ */
+	background: #53565A;
+	color: #ffffff;
 	border-top: solid 1px #e9e9e9;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 	
-	-webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
-	border-radius: 0.5em;
+	-webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	border-radius: 25px;
+
 }
 
 #line, #line2 {
@@ -325,9 +335,10 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
 #timesliderBackground {
 	/*width:80%;*/
 	height:12px;
-	background-color: rgb(217,217,214);
-	margin-left:160px;
-	margin-top:20px;
+	background-color: white;
+	margin-left:5%;
+	margin-right: 5%;
+	margin-top:5px;
 	border-radius: 0.6em;
 	-moz-border-radius: 0.6em;
 	-webkit-border-radius: 0.6em;
@@ -347,12 +358,8 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
 	-webkit-border-radius: 0.6em;
 }
 #playpause {
-	position:absolute;	
 	padding:3px;
 	display:inline-block;
-	margin-top: -30px;
-	float:left;
-	opacity:.6;
 }
 #playpause a {
 	width:39px;
@@ -362,19 +369,19 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
     text-decoration: none;
     display: block;
 }
-
-#backward, #forward {
-	position:absolute;	
-	padding:3px;
-	display:inline-block;
-	margin-top: -25px;
-	opacity:.6;
+#extra-info{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
 }
+
 
 #indicator{
 	position:absolute;
-	margin-top: -12px;
-	color:#000000;
+	margin-top: -16px;
+	color: white;
+	font-size: 0.85rem;
+	font-weight: 400;
 }
 
 #serial{
@@ -463,14 +470,48 @@ html[xmlns] #viewNav ul, #navbox ul, #start ul {
 	margin: 0 auto;
 }
 
-.selectedTooltip {
-	background-color: #E0A526;
+.selectedTooltip a {
+	color: #E0A526 !important;
 }
 
 #ch_text {
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 700px;
     display: block;
-    overflow: hidden
+    overflow: hidden;
+	flex: 1;
+	text-align: center;
+	padding: 5px 0px;
+}
+#notes {
+	width: 30px;
+}
+.icons-styles{
+	width: 30px;
+	padding:3px;
+	display:inline-block;
+	cursor: pointer;
+}
+#tiles-view{
+	width: 25px;
+	margin-top: 2px;
+}
+#play {
+	display: none;
+}
+.icons-styles-without-padding{
+	width: 30px;
+	display:inline-block;
+	cursor: pointer;
+}
+#mute {
+	display: block;
+}
+
+#unmute{
+	display: none;
+}
+
+#unmute img{
+	width: 30px;
 }

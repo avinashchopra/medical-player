@@ -239,3 +239,9 @@ a {
 #footer, #footer a{
 	font-size: 12px;
 }
+#instruction{
+	width: 50%;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 15px;
+}
