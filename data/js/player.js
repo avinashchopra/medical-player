@@ -497,9 +497,6 @@ function changeVideoTime(e) {
 	e.target.getParent().toggleClass('current');
 }
 
-function pancarteShowHandler(e){
-	setVidBig($('vidContainer1'));
-}
 
 function pancarteHideHandler(e){
 	if(previousActiveClicked != null) {
@@ -578,8 +575,7 @@ function setVidBig(target){
 		var index;
 		var currentVid;
 		smallVids.each(function(smallVid){
-			if(smallVid.container == target)
-			{
+			if(smallVid.container == target) {
 				index = smallVids.indexOf(smallVid);
 				currentVid = smallVid;
 			}

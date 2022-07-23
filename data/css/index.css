@@ -228,7 +228,11 @@ a {
 .header-title {
 	font-size: 0.9rem;
     margin-left: 200px;
-    font-weight: bold;
+	display: inline;
+    right: 0;
+    position: absolute;
+    margin-top: -15px;
+    margin-right: 20px;
 }
 .notes {
 	width: 27px;
