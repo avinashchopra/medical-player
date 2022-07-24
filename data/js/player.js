@@ -168,7 +168,6 @@ function init(){
 		descriptions:[],
 		pancartes:[]
 	});
-	timeslider.addEvent('onTick', onTickHandler);
 	sp = new Spinner(document.body, {message:'loading...', containerPosition:{allowNegative:true, offset:{x:25, y:-300}}});
 	sp.show();
 	videoIds.forEach((ids)=> {
@@ -179,7 +178,6 @@ function init(){
 let debounce;
 let countTracker = 0;
 function initPlay() {
-	console.log(" init play --- ");
 	countTracker++;
 	if(debounce) {
 		clearTimeout(debounce);
@@ -244,28 +242,6 @@ function changeChapter() {
 		vid.move(start);
 	});
 	return false;
-}
-
-//	time slider on tick
-function onTickHandler(data) {
-	cuepoints.data.each(function(cuepoint) {
-		if (cuepoint.time === data.timeStr) {
-			if (cuepoint.focusOn != '') {
-				setVidBig($(cuepoint.focusOn));
-			}
-		}
-	});
-	
-	if (typeof(data.timeStr) === 'string') {
-		var seconds = toSeconds(data.timeStr);
-		chapters.data.each(function(chapter) {
-			var start = toSeconds(chapter.start),
-				end = toSeconds(chapter.end);
-			if (seconds >= start && seconds <= end) {
-				$('ch_text').set('text', chapter.text + '. ' + chapter.title);
-			}
-		});
-	}
 }
 
 //	convert to seconds
@@ -438,7 +414,6 @@ function gridHandler(e){
 		modus = 'grid';
 		resizeHandler(null);
 	}
-	return false;
 }
 
 function bigHandler(e){
@@ -447,7 +422,6 @@ function bigHandler(e){
 		organiseBigVids();
 		resizeHandler(null);
 	}
-	return false;
 }
 
 function organiseBigVids(){
@@ -459,13 +433,21 @@ function organiseBigVids(){
 }
 
 function vidClickedHandler(e){
+	const divId = e.target.id;
+	let id;
+	if(divId.contains('vidContainer')){
+		id = (e.target.id).replace('vidContainer', '');
+	} else {
+		id = (e.target.id).replace('vid', '');
+	}
+	activeClicked = {container:$('vidContainer'+id), vid:videoObjects[parseInt(id)-1]};
 	if(!activeClicked) {
 		return;
 	}
 	if(modus != 'big') {
 		modus = 'big';
-		organiseBigVids();
 	}
+	organiseBigVids();
 	var target = e.target.getParent();
 	if(target != activeClicked.container) {
 		//zoeken naar een smallVid die als container target heeft
@@ -541,8 +523,6 @@ function forwardClickHandler(e) {
 	if(!forwardClicked) {
 		timeslider.nextCue();
 	}
-	console.log("forwardClickHandler -- ")
-	return false;
 }
 
 function forwardBackwardDelay(){
@@ -728,6 +708,9 @@ function showGridView() {
 
 function onGridButtonClick() {
 	if(getNumberOfView() == 1) {
+		return;
+	}
+	if(!activeClicked) {
 		return;
 	}
 	if(modus === big) {
