@@ -467,30 +467,6 @@ function vidClickedHandler(e){
 	resizeHandler(null);
 }
 
-function setVidBig(target){
-	if(modus != 'big') {
-		modus = 'big';
-		organiseBigVids();
-		previousActiveClicked = null;
-	}else{
-		previousActiveClicked = activeClicked;	
-	}
-	if(target != activeClicked.container) {
-		//zoeken naar een smallVid die als container target heeft
-		var index;
-		var currentVid;
-		smallVids.each(function(smallVid){
-			if(smallVid.container == target) {
-				index = smallVids.indexOf(smallVid);
-				currentVid = smallVid;
-			}
-		});
-		smallVids[index] = activeClicked;
-		activeClicked = currentVid;
-	}
-	resizeHandler(null);
-}
-
 function playButtonClick() {
 	$('play').setStyle('display', 'none');
 	$('pause').setStyle('display', 'block');
@@ -576,8 +552,9 @@ function setFooterCss() {
 	$('indicator').setPosition({
 		x:Math.round($('player-control-icons').getSize().x + $('timesliderBackground').getSize().x)
 	});
+	rWidth = getNumberOfView() ===1 ? $('vid1').getSize().x : rWidth;
 	$('videocontainer').setStyles({
-		'width':rWidth,
+		'width': rWidth,
 		'height':rHeight
 	});
 	$('footer').setPosition({
@@ -586,7 +563,6 @@ function setFooterCss() {
 	});
 }
 
-/* Wanneer browserwindow resized */
 function resizeHandler(e){
 	if(modus == undefined || modus == null || modus == "") {
 		return;
@@ -594,9 +570,9 @@ function resizeHandler(e){
 	maxWidth = window.innerWidth;
 	maxHeight = window.innerHeight;
 	setFooterCss();
-	if(modus == 'big') {
+	timeslider.resize();
+	if(modus == 'big' || getNumberOfView() == 1) {
 		if(inited) {
-			timeslider.resize();
 			//width en height om te resizen
 			var rWidth = maxWidth;
 			var rHeight =  maxHeight - $('footer').getSize().y - 20;;
