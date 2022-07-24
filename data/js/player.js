@@ -219,7 +219,6 @@ function loadedHandler(e) {
 		vidContainers.forEach((ids) => {
 			$(ids).addEvent('click', vidClickedHandler);
 		})
-		window.addEvent('mousemove', mousemoveHandler);
 		inited = true;
 		sp.hide();
 		intro = true;
@@ -283,18 +282,6 @@ function endedHandler(e){
 		var children = tooltip.getChildren();
 		setLocation(children[0]);
 	}
-}
-
-function mousemoveHandler(e) {
-}
-
-function doFooterRollover(){
-	var bottomFx = new Fx.Tween('footer', {
-		property: 'top',
-		duration: 400
-	});
-	// bottomFx.start(maxHeight-$('footer').getSize().y+15);
-	smallVidsChange();
 }
 
 function smallVidsChange() {
@@ -412,8 +399,6 @@ function endSeek(){
 		videoIds.forEach(ids => {
 			$(ids).unspin();
 		})
-		// $('playpause').getElement('a').getElement('img').setStyle('margin-left', -39);
-		// $('playpause').store('playing', true);
 		videoObjects.each(function(vid) {
 			vid.play();
 		});
@@ -479,7 +464,6 @@ function vidClickedHandler(e){
 	}
 	if(modus != 'big') {
 		modus = 'big';
-		//$('big').addClass('current');
 		organiseBigVids();
 	}
 	var target = e.target.getParent();
