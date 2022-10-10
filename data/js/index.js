@@ -56,6 +56,7 @@ $(function()
 	{
 		event.preventDefault();
 		$disclaimerWrapper.show().animate({opacity: 1}, animationOptions);
+		$disclaimerWrapper.css({'display': 'flex', 'justify-content': 'center'})
 	});
 	
 	$('#disclaimer').click(function(event)
@@ -75,6 +76,7 @@ $(function()
 	{
 		event.preventDefault();
 		$instructionWrapper.show().animate({opacity: 1}, animationOptions);
+		$instructionWrapper.css({'display': 'flex', 'justify-content': 'center'})
 	});
 
 	$('#instruction').click(function(event)

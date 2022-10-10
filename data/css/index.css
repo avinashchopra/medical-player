@@ -150,7 +150,6 @@ a {
 }
 #disclaimer, #instruction {
 	background: #53565A;
-	margin-left: 25%;
 	padding: 20px;
 	position: absolute;
 	top: 0%;
@@ -191,14 +190,14 @@ a {
 	font-size: 1rem;
 }
 .footer-header {
-	padding: 5px;
+	padding: 3px 5px;
 }
 .footer-header-link {
 	flex: 1;
 }
 .footer-body {
 	display: flex;
-	padding: 5px;
+	padding: 0px 0px 5px 5px;
 }
 .footer-body-first-column {
 	flex: 1;
@@ -245,7 +244,8 @@ a {
 .doc-info-card {
 	display: flex;
 	border-radius: 5px;
-	box-shadow: 3px 3px rgba(118,118,120, 0.5)
+	box-shadow: 3px 3px rgba(118,118,120, 0.5);
+	margin-top: 30px;
 }
 .doc-image img{
 	width: 90px;
@@ -255,16 +255,17 @@ a {
 	padding: 0px 5px;
 }
 .doc-info-heading{
-	line-height: 1.5rem;
+	font-size: 0.9rem;
+	line-height: 1.15rem;
 }
 .doc-info-name{
 	font-weight: bold;
 	font-size: 1rem;
+	line-height: 1.1rem;
 }
 .doc-info-details {
-	font-weight: bold;
-	font-size: 1rem;
-	line-height: 1.3rem;
+	font-size: 0.9rem;
+	line-height: 1rem;
 }
 .footer-header {
 	display: flex;
