@@ -1,0 +1,271 @@
+@media screen and (max-width: 1400px) {
+	#header .logo .logo-image {
+		width: 50%;
+	}
+	.doc-info-heading{
+		font-size: 0.65rem;	
+	}
+	.copyright-text, .chapter, .chapter .title, .disclaimer a, .instruction a, .doc-info-name, .doc-info-details {
+		font-size: 0.7rem;
+	}
+	#footer, #footer .footer-header .footer-header-link a, #footer .footer-header .header-title, .instruction-p{
+		font-size: 0.7rem;
+	}
+	.doc-info-name, .doc-info-details {
+		line-height: 1.1rem;
+	}
+	.chapter {
+		max-width: 115px;
+	}
+	.chapter .image{
+		width: 115px;
+		height: 115px;
+		border-radius: 10px 10px 0 0;
+	}
+	.chapter .title{
+		min-height: 40px;
+		border-radius: 0 0 10px 10px;
+	}
+	.chapter .image img{
+		width: 115px;
+		height: 115px;
+	}
+	.disclaimer a, .instruction a {
+		padding: 3px;
+		margin-left: 5px;
+	}
+	.notes, .notes a img {
+		width: 15px;
+		height: 15px;
+	}
+	.header-title {
+		font-size: 0.5rem;
+	}
+	.footer-header {
+		padding: 3px 5px;
+	}
+	.header-title {
+		display: inline;
+		margin-top: auto;
+		margin-right: 20px;
+	}
+	#instruction{
+		font-size: 0.4rem;
+	}
+	#disclaimer img {
+		width: 400px;
+		height: 400px;
+	}
+	.instruction-header, .instruction-blue-heading {
+		font-size: 0.9rem;
+	}
+}
+@media screen and (max-width: 1300px) {
+	#header .logo .logo-image {
+		width: 45%;
+	}
+	.copyright-text, .chapter, .chapter .title, .disclaimer a, .instruction a {
+		font-size: 0.65rem;
+	}
+	#footer, #footer .footer-header .footer-header-link a, #footer .footer-header .header-title, .instruction-p{
+		font-size: 0.65rem;
+	}
+	.chapter {
+		max-width: 90px;
+	}
+	.chapter .image{
+		width: 90px;
+		height: 90px;
+		border-radius: 9px 9px 0 0;
+	}
+	.chapter .title{
+		min-height: 35px;
+		border-radius: 0 0 9px 9px;
+	}
+	.chapter .image img{
+		width: 90px;
+		height: 90px;
+	}
+	.disclaimer a, .instruction a {
+		padding: 3px;
+		margin-left: 5px;
+	}
+	.notes, .notes a img {
+		width: 15px;
+		height: 15px;
+	}
+	.header-title {
+		font-size: 0.5rem;
+	}
+	.footer-header {
+		padding: 3px 5px;
+	}
+	.header-title {
+		display: inline;
+		margin-top: auto;
+		margin-right: 20px;
+	}
+	#instruction{
+		font-size: 0.4rem;
+	}
+	#disclaimer img {
+		width: 400px;
+		height: 400px;
+	}
+	.instruction-header, .instruction-blue-heading {
+		font-size: 0.85rem;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#header .logo .logo-image {
+		width: 40%;
+	}
+	.copyright-text, .chapter, .chapter .title, .disclaimer a, .instruction a {
+		font-size: 0.6rem;
+	}
+	#footer, #footer .footer-header .footer-header-link a, #footer .footer-header .header-title, .instruction-p{
+		font-size: 0.6rem;
+	}
+	.chapter {
+		max-width: 85px;
+	}
+	.chapter .image{
+		width: 85px;
+		height: 85px;
+		border-radius: 8px 8px 0 0;
+	}
+	.chapter .title{
+		min-height: 30px;
+		border-radius: 0 0 8px 8px;
+	}
+	.chapter .image img{
+		width: 85px;
+		height: 85px;
+	}
+	.disclaimer a, .instruction a {
+		padding: 3px;
+		margin-left: 5px;
+	}
+	.notes, .notes a img {
+		width: 15px;
+		height: 15px;
+	}
+	.header-title {
+		font-size: 0.5rem;
+	}
+	.footer-header {
+		padding: 3px 5px;
+	}
+	.header-title {
+		display: inline;
+		margin-top: auto;
+		margin-right: 20px;
+	}
+	#instruction{
+		font-size: 0.4rem;
+	}
+	#disclaimer img {
+		width: 400px;
+		height: 400px;
+	}
+	.instruction-header, .instruction-blue-heading {
+		font-size: 0.80rem;
+	}
+}
+
+
+@media screen and (max-width: 1300px) {
+	#header .logo .logo-image {
+		width: 45%;
+	}
+	.copyright-text, .chapter, .chapter .title, .disclaimer a, .instruction a {
+		font-size: 0.65rem;
+	}
+	#footer, #footer .footer-header .footer-header-link a, #footer .footer-header .header-title, .instruction-p{
+		font-size: 0.65rem;
+	}
+	.chapter {
+		max-width: 90px;
+	}
+	.chapter .image{
+		width: 90px;
+		height: 90px;
+		border-radius: 9px 9px 0 0;
+	}
+	.chapter .title{
+		min-height: 35px;
+		border-radius: 0 0 9px 9px;
+	}
+	.chapter .image img{
+		width: 90px;
+		height: 90px;
+	}
+	.disclaimer a, .instruction a {
+		padding: 3px;
+		margin-left: 5px;
+	}
+	.notes, .notes a img {
+		width: 15px;
+		height: 15px;
+	}
+	.header-title {
+		font-size: 0.5rem;
+	}
+	.footer-header {
+		padding: 3px 5px;
+	}
+	.header-title {
+		display: inline;
+		margin-top: auto;
+		margin-right: 20px;
+	}
+	#instruction{
+		font-size: 0.4rem;
+	}
+	#disclaimer img {
+		width: 400px;
+		height: 400px;
+	}
+	.instruction-header, .instruction-blue-heading {
+		font-size: 0.85rem;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+
+	.copyright-text, .chapter, .chapter .title, .disclaimer a, .instruction a {
+		font-size: 1.05rem;
+	}
+	#footer, #footer .footer-header .footer-header-link a, #footer .footer-header .header-title, .instruction-p{
+		font-size: 1.05rem;
+	}
+	.chapter {
+		max-width: 145px;
+	}
+	.chapter .image{
+		width: 145px;
+		height: 145px;
+		border-radius: 10px 10px 0 0;
+	}
+	.chapter .title{
+		min-height: 55px;
+		border-radius: 0 0 10px 10px;
+	}
+	.chapter .image img{
+		width: 145px;
+		height: 145px;
+	}
+	.disclaimer a, .instruction a {
+		padding: 3px;
+		margin-left: 5px;
+	}
+	.doc-image img{
+		width: 140px;
+		border-radius: 5px;
+	}
+	.doc-info-name, .doc-info-details {
+		font-size: 1.25rem;
+		line-height: 2rem;
+	}
+}
