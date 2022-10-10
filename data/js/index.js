@@ -98,6 +98,7 @@ window.onload = function () {
 	if(cookiesValue === null) {
 		$disclaimerWrapper = $('#disclaimerWrapper');
 		$disclaimerWrapper.show().animate({opacity: 1}, {duration: 250, easing: 'easeInOutExpo'});
+		$disclaimerWrapper.css({'display': 'flex', 'justify-content': 'center'})
 		setCookie('showInstruction', '1', 1);
 	}
 }
